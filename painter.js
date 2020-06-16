@@ -12,4 +12,12 @@ Painter.prototype.checkLitresOfPaint = function(){
     }
     return total
 }
+Painter.prototype.checkEnoughPaintForRoom = function(stock, room){
+    if(stock >= room){
+        return true
+    }  else {
+        return false
+    }
+}
+// Painter.prototype.paintIfStockSufficient = function()
 module.exports = Painter
