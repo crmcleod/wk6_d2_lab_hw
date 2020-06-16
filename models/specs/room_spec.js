@@ -28,27 +28,28 @@ describe('Room', function(){
 describe('Paint Can', function(){
     let paintCan
     beforeEach(function(){
-        paintCan1 = new PaintCan(100)
-        paintCan2 = new PaintCan(0)
+        paintCan = new PaintCan(100)
     })
     describe('Properties', function(){
         it('should contain paint', function(){
-            const actual = paintCan1.litres
+            const actual = paintCan.litres
             assert.strictEqual(actual, 100)
         })
         it('checks if the can is empty -- not empty', function(){
-            const actual = paintCan1.checkIfEmpty()
+            const actual = paintCan.checkIfEmpty()
             assert.strictEqual(actual, 100)
         })
-        it('checks if the can is empty -- is empty', function (){
-            const actual = paintCan2.checkIfEmpty()
-            assert.strictEqual(actual, 'Empty')
-        })
         it('checks if the can is empty -- after self emptying', function (){
-            paintCan1.emptySelf()
-            const actual = paintCan1.checkIfEmpty()
+            paintCan.emptySelf()
+            const actual = paintCan.checkIfEmpty()
             assert.strictEqual(actual, 'Empty')
-
         })
+    })
+})
+
+describe('Decorator', function(){
+    let decorator
+    beforeEach(function(){
+        decorator = new decorator()
     })
 })
